@@ -1,7 +1,7 @@
 import './css/styles.css';
 import NewsApiService from './js/api-service';
-import { lightbox } from './js/lightbox';
-import { Notiflix } from 'notiflix';
+import lightbox from './js/lightbox';
+import Notify from 'notiflix';
 
 const refs = {
   searchForm: document.querySelector('.search-form'),
@@ -36,7 +36,7 @@ function onSearch(element) {
 
   isShown = 0;
   fetchGallery();
-  onRenderGallery(hits);
+  onRenderGallery(element);
 }
 
 function onLoadMore() {
@@ -63,7 +63,7 @@ async function fetchGallery() {
   isShown += hits.length;
 
   if (isShown < total) {
-    Notify.success(`Hooray! We found ${total} images !!!`);
+    Notify.success(`Hooray! We found ${total} images`);
     refs.loadMoreBtn.classList.remove('is-hidden');
   }
 

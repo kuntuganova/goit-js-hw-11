@@ -13,6 +13,20 @@
     color: #212121;
     line-height: 1.5;
   }
+
+  a {
+    text-decoration: none;
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding-top: 10px;
+  }
+  
   .search-form {
     display: flex;
     justify-content: center;
@@ -28,6 +42,7 @@
     border-style: none;
     border-radius: 2px 0 0 2px;
   }
+
   .submitBtn {
     border-style: none;
     border-radius: 0 2px 2px 0;
@@ -37,9 +52,10 @@
   
   .gallery {
     padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
   }
   
   .photo-card {
@@ -63,6 +79,7 @@
     width: 100%;
     object-fit: cover;
   }
+
   .info {
     display: flex;
     justify-content: space-between;
