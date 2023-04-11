@@ -1,7 +1,7 @@
 import './css/styles.css';
 import NewsApiService from './js/api-service';
-import lightbox from './js/lightbox';
-import Notify from 'notiflix';
+import { lightbox } from './js/lightbox';
+import { Notify } from 'notiflix';
 
 const refs = {
   searchForm: document.querySelector('.search-form'),
